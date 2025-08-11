@@ -1,0 +1,177 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #292828;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(204, 170, 170, 0.7);
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-text h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.logo-text h5 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #853a3a;
+}
+
+/*styling the main*/
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 5px 10px;
+}
+
+.top-bar {
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.cart-btn {
+  background: #634b4b;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart-btn:hover {
+  color: #292828;
+  background-color: #c59999;
+}
+
+h2 {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+  
+}
+
+.product {
+  border: 1px solid #c4a0a0;
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.product img {
+  width: 100%;
+  height: 300px;
+  background: #eee;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+button {
+  margin: 5px 5px 0;
+  padding: 5px 10px;
+  border: none;
+  background: #634b4b;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover{
+  color: #292828;
+  background-color: #c59999;
+}
+
+
+/* styling the footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 70px;
+  background: rgba(187, 129, 95, 0.7);
+  font-weight: bold;
+  flex-wrap: wrap;
+}
+
+
+/*Responsiveness*/
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .logo {
+    justify-content: center;
+  }
+  
+  .logo img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .logo-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .logo-text h5 {
+    font-size: 0.9rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
